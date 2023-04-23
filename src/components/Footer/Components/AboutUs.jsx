@@ -1,4 +1,4 @@
-import styles from './Styles/AboutUs.module.css'
+import styles from './styles/AboutUs.module.css'
 
 import { Link } from 'react-router-dom'
 

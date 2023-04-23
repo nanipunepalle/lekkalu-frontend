@@ -9,12 +9,12 @@
         color: white;
         text-decoration: none;
         font-weight: bold;
-        font-size: 1.4vw;
+        font-size: 1.3rem;
         margin-bottom: 1vw;
     } .phraseP{
         color: white;
         font-weight: normal;
-        font-size: 1vw;
+        font-size: 0.8rem;
         text-decoration: none;
     }
     .containerSN{
@@ -32,6 +32,7 @@
         text-align: center;
         width: 13vw;
         color: white;
+        font-size: 1rem;
         transition: .2s;
     }
     .containerDownload> a > button:hover{
@@ -53,12 +54,12 @@
             width:3vw;
         }
 
-        @media (max-width:560px) {
+        @media (max-width:768px) {
             .container{
                 width: 70%;
             }
             .container > h3 > a{
-                font-size: 4vw;
+                font-size: 1.2rem;
         
             } .container > h5 > a{
                 font-size: 3vw;
@@ -72,11 +73,12 @@
                 width: 4vw;
             }
             .phraseP{
-                font-size: 3vw;
+                font-size: 0.8rem;
             }
 
             .containerDownload> a > button{
                 width: 100%;
+                font-size: 1rem;
             }   .containerDownload > div > img {
                 width:7vw;
             }

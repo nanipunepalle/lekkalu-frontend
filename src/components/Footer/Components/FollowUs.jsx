@@ -1,4 +1,4 @@
-import styles from './Styles/FollowUs.module.css'
+import styles from './styles/FollowUs.module.css'
 import { Link } from 'react-router-dom'
 import facebook from '../static/facebok.png'
 // Add links on link field

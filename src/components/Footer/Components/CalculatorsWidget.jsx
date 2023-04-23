@@ -1,4 +1,4 @@
-import styles from './Styles/CalculatorsWidget.module.css'
+import styles from './styles/CalculatorsWidget.module.css'
 import { Link } from 'react-router-dom'
 
 export default function CalculatorWidget () {
