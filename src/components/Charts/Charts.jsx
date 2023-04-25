@@ -40,11 +40,6 @@ const Test = () => {
                <WeeklyChart data={weeklyExpense} />
                <SpentBalanceChart data={monthlyExpenses} />
                <CumSumChart data={monthlyExpenses} />
-               <AssetsLiabilitiesChart data={assets} type={'assets'} />
-               <AssetsLiabilitiesChart
-                  data={liabilities}
-                  type={'liabilities'}
-               />
             </>
          )}
       </div>

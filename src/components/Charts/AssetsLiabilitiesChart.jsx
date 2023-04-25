@@ -195,7 +195,9 @@ export const AssetsLiabilitiesChart = (props) => {
                </ResponsiveContainer>
             </div>
          ) : (
-            <h4>No data for {props.type} chart</h4>
+            <div className='m-5 p-5'>
+               <h4>No data for {props.type} chart</h4>
+            </div>
          )}
       </>
    );

@@ -1,0 +1,33 @@
+.flex-container {
+    display: flex;
+    background-color: #f0ebda;
+    border-radius: 25px;
+    margin: 20px;
+    flex-wrap: wrap;
+    min-width: 550px;
+  }
+  
+  .flex-container > div {
+    background-color: #fff;
+    border: 2px solid #cccbc6;
+    border-radius: 25px;
+    min-width: 540px;
+
+  }
+
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+
+    }
+
+  }
+  @media  only screen and (min-width: 800px) and (max-width: 1380px)
+ {
+    .flex-container {
+        margin-left: 120px;
+        margin-right: 120px;
+
+    }
+
+  }
