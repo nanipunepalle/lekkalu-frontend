@@ -430,6 +430,20 @@ const Provider = ({children}: MyComponentProps) => {
         }
     };
 
+    type UpdatedExpectedType = {
+        budget: never[];
+        expenses: never[];
+        weeklyExpense: never[];
+        monthlyExpenses: never[];
+        tags: never[];
+        assets: never[];
+        liabilities: never[];
+        incomeStatement: {
+            income: never[];
+            expenses: never[];
+        };
+        [key: string]: any; // Add index signature for arbitrary properties
+    };
     return (
         <Context.Provider
             value={{
@@ -454,7 +468,7 @@ const Provider = ({children}: MyComponentProps) => {
                 fetchIncomeSources,
                 fetchIncomeExpenses,
                 fetchIncomeStatement
-            }}
+            } as UpdatedExpectedType}
         >
             {children}
         </Context.Provider>

@@ -1,6 +1,6 @@
 import closeImage from './static/close.png'
 import styles from './PopUp.module.css'
-import {useState, useRef, useContext} from 'react'
+import React, {useState, useRef, useContext} from 'react'
 import checkEmail from './utils/checkEmail'
 import SendForm from './Components/SendForm/SendForm'
 import Background from './Components/Background/Background'
@@ -12,11 +12,11 @@ export default function SupportPopUp({Context}) {
     }
 
     const {giveFeedback} = useContext(Context)
-    const formRef = useRef(null)
-    const emailRef = useRef(null)
-    const nameRef = useRef(null)
-    const subjectRef = useRef(null)
-    const submitRef = useRef(null)
+    const formRef: React.MutableRefObject<any> = useRef(null)
+    const emailRef: React.MutableRefObject<any> = useRef(null)
+    const nameRef: React.MutableRefObject<any> = useRef(null)
+    const subjectRef: React.MutableRefObject<any> = useRef(null)
+    const submitRef: React.MutableRefObject<any> = useRef(null)
     const [email, setEmail] = useState('')
     const [error, setError] = useState()
     const [emailSended, setEmailSended] = useState(false)
@@ -50,7 +50,7 @@ export default function SupportPopUp({Context}) {
             }
         } else {
             emailInput.style.borderBottom = '1px red solid'
-            setError(true)
+            setError(true);
         }
 
     }
@@ -58,7 +58,7 @@ export default function SupportPopUp({Context}) {
         const emailInput = emailRef.current
         emailInput.style.borderBottom = ''
 
-        setError(false)
+        setError(undefined)
         setEmail(emailInput.value)
     }
     const resetValues = () => {
@@ -74,7 +74,7 @@ export default function SupportPopUp({Context}) {
             <Background handleClose={handleClose} close={close}/>
             <SendForm emailSended={emailSended}/>
 
-            <div className={styles.container} style={{display: close && 'none'}} id='popUpSupport'>
+            <div className={styles.container} style={{display: close ? 'none' : undefined}} id='popUpSupport'>
                 <div className={styles.containerCloseTitle}>
                     <img src={closeImage} alt="" className={styles.close} onClick={handleClose}/>
                     <h3 className={styles.title}>Share Your Thoughts with Us</h3>

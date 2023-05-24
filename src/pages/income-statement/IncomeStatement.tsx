@@ -10,6 +10,7 @@ import {BeatLoader} from "react-spinners";
 import Colors from "../../constants/colors";
 
 
+
 const IncomeStatement = ({Context}: any) => {
     const {fetchIncomeStatement, incomeStatement}: any = useContext(Context);
     const [currentab, setCurrentTab] = React.useState(0);

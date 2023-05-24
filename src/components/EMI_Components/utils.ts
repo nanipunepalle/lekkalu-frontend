@@ -41,7 +41,7 @@ export const handleShare = (data) => {
     copyToClipboard(share_url);
 };
 
-export const calculateEmiOutputs = (data) => {
+export const calculateEmiOutputs: any = (data) => {
     const {loan_principal, loan_interest, loan_tenure} = data;
 
     if (loan_principal && loan_interest && loan_tenure) {
@@ -84,7 +84,7 @@ export const calculateEmiOutputs = (data) => {
     }
 };
 
-export const calculateLoanPrincipalAndInterestPayable = (
+export const calculateLoanPrincipalAndInterestPayable: any = (
     loan_principal: any,
     total_interest_payable: any
 ) => {

@@ -7,11 +7,18 @@ import Add from "../add-card/AddCard";
 import StatsAccordion from "../stats-accordion/StatsAccordion";
 import {numDifferentiation} from "../../../utils/AppUtils";
 
-const IncomeStatementSummary = ({
-                                    incomeStatement,
-                                    totalIncome,
-                                    totalExpense,
-                                }) => {
+interface IncomeStatementSummaryProps {
+    incomeStatement: any;
+    totalIncome: any;
+    totalExpense: any;
+    difference: number;
+}
+
+const IncomeStatementSummary: React.FC<IncomeStatementSummaryProps> = ({
+                                                                           incomeStatement,
+                                                                           totalIncome,
+                                                                           totalExpense,
+                                                                       }) => {
     console.log({totalIncome, totalExpense});
     const [expanded, setExpanded] = React.useState(false);
     const handleChange = (panel: any) => (event: any, isExpanded) => {
