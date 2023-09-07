@@ -61,72 +61,79 @@ export const Signin = ({ Context }) => {
     };
 
     return (
-        <div>
-            <Container component="main" maxWidth="xs">
-                <CssBaseline />
-                <Box
-                    sx={{
-                        marginTop: 8,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                    }}
-                >
-                    <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                        <LockOutlinedIcon />
-                    </Avatar>
-                    <Typography component="h1" variant="h4">
-                        Sign in
-                    </Typography>
-                    <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
-                        <TextField
-                            autoComplete="username"
-                            name="username"
-                            required
-                            fullWidth
-                            id="username"
-                            label="Username"
-                            autoFocus
-                        />
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            name="password"
-                            label="Password"
-                            type="password"
-                            id="password"
-                            autoComplete="current-password"
-                        />
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Remember me"
-                        />
-                        <Button
-                            type="submit"
-                            fullWidth
-                            variant="contained"
-                            sx={{ mt: 3, mb: 2 }}
-                            disabled={loading}
+        <div style={{ backgroundColor: "#1976D2", minHeight: "100vh" }}>
+            <div className="d-md-flex flex-md-row justify-content-md-around align-items-center min-vh-100">
+                <div className="d-flex justify-content-center align-items-center py-3">
+                    <span className="bg-light p-3 rounded-circle"></span>
+                    <strong className="text-center text-light fs-3 ms-2">finuncle</strong>
+                </div>
+                <div className="bg-light p-5 rounded" style={{maxWidth: "35rem"}}>
+                    <div className="d-flex">
+                        <div className="py-5 b-light"></div>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                            }}
                         >
-                            Sign In
-                        </Button>
-                        <Grid container>
-                            <Grid item xs>
-                                <Link to={""} variant="body2">
-                                    Forgot password?
-                                </Link>
-                            </Grid>
-                            <Grid item>
-                                <Link component={ReactRouterLink} to="/signup" variant="body2">
-                                    {"Don't have an account? Sign Up"}
-                                </Link>
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </Box>
-                <Copyright sx={{ mt: 8, mb: 4 }} />
-            </Container>
+                            <Typography component="h5" variant="h5" marginBottom={3}>
+                                Log in or Sign up
+                            </Typography>
+                            <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
+                                <TextField
+                                    autoComplete="username"
+                                    name="username"
+                                    required
+                                    fullWidth
+                                    id="username"
+                                    label="Username"
+                                    autoFocus
+                                />
+                                <Button
+                                    type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    sx={{ mt: 3, mb: 2 }}
+                                    disabled={loading}
+                                >
+                                    Continue
+                                </Button>
+
+                                <p className="text-center">or</p>
+                                <Button
+                                    type="submit"
+                                    fullWidth
+                                    variant="outlined"
+                                    sx={{ mt: 3, mb: 2 }}
+                                    disabled={loading}
+                                >
+                                    continue with facebook
+                                </Button>
+                                <Button
+                                    type="submit"
+                                    fullWidth
+                                    variant="outlined"
+                                    sx={{ mt: 3, mb: 2 }}
+                                    disabled={loading}
+                                >
+                                    continue with google
+                                </Button>
+                                <Button
+                                    type="submit"
+                                    fullWidth
+                                    variant="outlined"
+                                    sx={{ mt: 3, mb: 2 }}
+                                    disabled={loading}
+                                >
+                                    continue with apple
+                                </Button>
+                            </Box>
+                        </Box>
+                    </div>
+                    <Copyright sx={{ mt: 8, mb: 4 }} />
+                </div>
+            </div>
         </div>
     )
 }
